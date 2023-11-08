@@ -1,0 +1,18 @@
+.cs-message__content {
+  background-color: #dacfe7;
+}
+
+.cs-message-input__content-editor-wrapper {
+  background-color: #dacfe7,
+}
+.App .cs-message--outgoing .cs-message__content {
+  background-color: #e1d5e1;
+}
+.App {
+  background-color: '#FDD7E4';
+  width:100%;
+  align-self: stretch;
+}
+@media only screen and (min-width: 480px) {
+  /* styles for devices with a minimum screen width of 480px */
+  }
