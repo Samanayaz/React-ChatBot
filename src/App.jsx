@@ -4,7 +4,7 @@ import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 
 
-const API_KEY = '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'
+const API_KEY = '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'
 
 function App() {
   const [messages, setMessages] = useState([
@@ -24,13 +24,13 @@ function App() {
 
     const newMessages = [...messages, newMessage ]; // all the old messgaes and the new messages
 
-    // update our messages state
+    // update messages state
     setMessages(newMessages);
 
     //set a typing indicator to chatGPT (send it over and see)
     setIsTyping(true);
 
-    // process message to chatGPT (send it over and see the response)
+    // process message to chatGPT (to see the response)
     await processMessageToChatGPT(newMessages);
   }
 
@@ -47,9 +47,6 @@ function App() {
     }
     return { role: role, content: messageObject.message }
    });
-
-   // role: 'user' -> a message from the user, 'assistant' -> a response from chatGPT
-   // 'system' -> generally one initial message defining HOW we want chatGPT to talk
 
    const systemMessage = {
     role: 'system',
